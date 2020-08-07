@@ -19,14 +19,14 @@ enum Player : Int {
         }
     }
     
-     static var currentPlayer : Player = .x
+    static var currentPlayer : Player = .x
     
     static func changePlayer(){
-     switch Player.currentPlayer {
+        switch Player.currentPlayer {
         case .x:
-         Player.currentPlayer = .o
+            Player.currentPlayer = .o
         case .o:
-         Player.currentPlayer = .x
+            Player.currentPlayer = .x
         }
     }
 }
