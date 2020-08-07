@@ -2,8 +2,8 @@
 //  GameTests.swift
 //  Tic_Tac_ToeTests
 //
-//  Created by Shukla, Nishant on 07/08/20.
-//  Copyright © 2020 Shukla, Nishant. All rights reserved.
+//  Created by - on 07/08/20.
+//  Copyright © 2020. All rights reserved.
 //
 
 import XCTest
@@ -209,7 +209,8 @@ class GameTests: XCTestCase {
     func testReset(){
         game.reset()
         XCTAssertEqual(Player.currentPlayer, .x, "on reset current player does not become X.")
-        XCTAssertEqual(game.gameBoard[1], 0, "Gameboard array's all values are not 0.")
+        let randomIndex = Int.random(in: 0..<9)
+        XCTAssertEqual(game.gameBoard[randomIndex], 0, "Gameboard array's all values are not 0.")
     }
     
     func updateGameBoardSuccessCase(combination : [Int]){

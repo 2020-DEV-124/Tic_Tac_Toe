@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DXv-r6-22a">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DXv-r6-22a">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,20 +16,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tic-Toc-Toe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDt-g8-wHO">
-                                <rect key="frame" x="82.5" y="10" width="155" height="33.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <rect key="frame" x="77" y="10" width="166" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tic-Toc-Toe" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8i-AQ-X6y">
-                                <rect key="frame" x="98.5" y="53.5" width="123.5" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <rect key="frame" x="103.5" y="56" width="113.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tLs-lJ-7eI">
-                                <rect key="frame" x="118" y="518" width="84" height="30"/>
-                                <state key="normal" title="Reset Game"/>
+                                <rect key="frame" x="104" y="512" width="112" height="36"/>
+                                <color key="backgroundColor" red="0.2364187837" green="0.52802485229999996" blue="0.35291594269999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <state key="normal" title="  Play Again  ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="playAgainTapped:" destination="DXv-r6-22a" eventType="touchUpInside" id="3Ag-r1-iUE"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="HhQ-xF-PPH">
                                 <rect key="frame" x="16" y="142" width="288" height="284"/>
@@ -37,7 +44,7 @@
                                     <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wpR-nv-lMU">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="88"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQe-GU-hUa">
+                                            <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SQe-GU-hUa">
                                                 <rect key="frame" x="0.0" y="0.0" width="89.5" height="88"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
@@ -48,10 +55,10 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 </variation>
                                                 <connections>
-                                                    <action selector="btnTapped:" destination="DXv-r6-22a" eventType="touchUpInside" id="u7x-lL-Lf3"/>
+                                                    <action selector="gameBoardButtonTapped:" destination="DXv-r6-22a" eventType="touchUpInside" id="74o-og-J0d"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fz-mk-zja">
+                                            <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fz-mk-zja">
                                                 <rect key="frame" x="99.5" y="0.0" width="89" height="88"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
@@ -62,10 +69,10 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 </variation>
                                                 <connections>
-                                                    <action selector="btnTapped:" destination="DXv-r6-22a" eventType="touchUpInside" id="gWp-PP-Eya"/>
+                                                    <action selector="gameBoardButtonTapped:" destination="DXv-r6-22a" eventType="touchUpInside" id="QBQ-i0-dC3"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOP-Eb-ChY">
+                                            <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cOP-Eb-ChY">
                                                 <rect key="frame" x="198.5" y="0.0" width="89.5" height="88"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
@@ -76,7 +83,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 </variation>
                                                 <connections>
-                                                    <action selector="btnTapped:" destination="DXv-r6-22a" eventType="touchUpInside" id="E5K-wD-zXo"/>
+                                                    <action selector="gameBoardButtonTapped:" destination="DXv-r6-22a" eventType="touchUpInside" id="z03-32-sBn"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -85,7 +92,7 @@
                                     <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QP0-Nx-nsX">
                                         <rect key="frame" x="0.0" y="98" width="288" height="88"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Bl-V0-KNT">
+                                            <button opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Bl-V0-KNT">
                                                 <rect key="frame" x="0.0" y="0.0" width="89.5" height="88"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
@@ -96,10 +103,10 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 </variation>
                                                 <connections>
-                                                    <action selector="btnTapped:" destination="DXv-r6-22a" eventType="touchUpInside" id="RfN-u8-mV4"/>
+                                                    <action selector="gameBoardButtonTapped:" destination="DXv-r6-22a" eventType="touchUpInside" id="o0t-4V-rZI"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uch-DA-wFw">
+                                            <button opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uch-DA-wFw">
                                                 <rect key="frame" x="99.5" y="0.0" width="89" height="88"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
@@ -110,10 +117,10 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 </variation>
                                                 <connections>
-                                                    <action selector="btnTapped:" destination="DXv-r6-22a" eventType="touchUpInside" id="rKh-al-VeI"/>
+                                                    <action selector="gameBoardButtonTapped:" destination="DXv-r6-22a" eventType="touchUpInside" id="y7P-Uv-mE0"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rb4-e8-9Lr">
+                                            <button opaque="NO" clipsSubviews="YES" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rb4-e8-9Lr">
                                                 <rect key="frame" x="198.5" y="0.0" width="89.5" height="88"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
@@ -124,7 +131,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 </variation>
                                                 <connections>
-                                                    <action selector="btnTapped:" destination="DXv-r6-22a" eventType="touchUpInside" id="zcR-i3-CcH"/>
+                                                    <action selector="gameBoardButtonTapped:" destination="DXv-r6-22a" eventType="touchUpInside" id="cf0-iu-cfT"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -133,7 +140,7 @@
                                     <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qhE-nn-Kc2">
                                         <rect key="frame" x="0.0" y="196" width="288" height="88"/>
                                         <subviews>
-                                            <button opaque="NO" clipsSubviews="YES" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Mlg-X5-Llp">
+                                            <button opaque="NO" clipsSubviews="YES" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Mlg-X5-Llp">
                                                 <rect key="frame" x="0.0" y="0.0" width="89.5" height="88"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
@@ -144,10 +151,10 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 </variation>
                                                 <connections>
-                                                    <action selector="btnTapped:" destination="DXv-r6-22a" eventType="touchUpInside" id="BuW-Fv-psa"/>
+                                                    <action selector="gameBoardButtonTapped:" destination="DXv-r6-22a" eventType="touchUpInside" id="phc-dZ-A1A"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="lSw-bj-Ped">
+                                            <button opaque="NO" clipsSubviews="YES" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="lSw-bj-Ped">
                                                 <rect key="frame" x="99.5" y="0.0" width="89" height="88"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
@@ -161,10 +168,10 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 </variation>
                                                 <connections>
-                                                    <action selector="btnTapped:" destination="DXv-r6-22a" eventType="touchUpInside" id="7TC-pd-VSF"/>
+                                                    <action selector="gameBoardButtonTapped:" destination="DXv-r6-22a" eventType="touchUpInside" id="dMh-lQ-1ga"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" clipsSubviews="YES" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4Ls-w7-hrO">
+                                            <button opaque="NO" clipsSubviews="YES" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="4Ls-w7-hrO">
                                                 <rect key="frame" x="198.5" y="0.0" width="89.5" height="88"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
@@ -175,7 +182,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                                 </variation>
                                                 <connections>
-                                                    <action selector="btnTapped:" destination="DXv-r6-22a" eventType="touchUpInside" id="D3a-eG-yfy"/>
+                                                    <action selector="gameBoardButtonTapped:" destination="DXv-r6-22a" eventType="touchUpInside" id="SXg-g5-Zc5"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -202,7 +209,8 @@
                         <viewLayoutGuide key="safeArea" id="rNo-yU-o8j"/>
                     </view>
                     <connections>
-                        <outlet property="lblGameState" destination="q8i-AQ-X6y" id="acO-sH-jQ8"/>
+                        <outlet property="gameStateLabel" destination="q8i-AQ-X6y" id="acO-sH-jQ8"/>
+                        <outlet property="playAgainBtn" destination="tLs-lJ-7eI" id="eea-Gg-wOe"/>
                         <outlet property="verticalStackView" destination="HhQ-xF-PPH" id="ZQd-cf-bDQ"/>
                     </connections>
                 </viewController>

@@ -17,8 +17,8 @@ class Game {
     }
     
     func checkWinner() -> Player? {
-        var winner : Player? = nil
         
+        var winner : Player? = nil
         let winCombinations = [
             [0,1,2],
             [3,4,5],
