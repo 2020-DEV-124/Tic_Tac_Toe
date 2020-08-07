@@ -24,9 +24,12 @@ The rules are described below :
 <!--view-->
 Tic_Tac_Toe in Portrait Mode <br>
 
+<img src="Documentation/1_Win_PortraitMode.png" alt="Tic_Tac_Toe in Portrait Mode" width="200"/> <br>
  <br>
  
  Tic_Tac_Toe in Landscape Mode <br>
+ 
+ ![Tic_Tac_Toe](Documentation/2_Win_LandscapeMode.png)
 
  <br>
 <!--/view-->
